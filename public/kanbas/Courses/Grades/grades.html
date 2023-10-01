@@ -1,127 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <title>Grades</title>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/Kanbas/Courses/CoursesNavigation/index.css"/>
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css"/>
+    <link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css"/>
+   
 </head>
 
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <ul>
-                        <li><a href="/Kanbas/Account/AccountNavigation/index.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="/Kanbas/Courses/CoursesNavigation/index.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <ul>
-                        <li><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
-                        <li><a href="#">Modules</a></li>
-                        <li><a href="#">Piazza</a></li>
-                        <li><a href="#">Zoom Meetings</a></li>
-                        <li><a href="/Kanbas/Courses/Assignments/index.html">Assignments</a></li>
-                        <li><a href="#">Quizzes</a></li>
-                        <li><a href="/Kanbas/Courses/Grades/grades.html">Grades</a></li>
-                        <li><a href="#">People</a></li>
-                        <li><a href="#">Panopto Video</a></li>
-                        <li><a href="#">Discussions</a></li>
-                        <li><a href="#">Announcements</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Rubrics</a></li>
-                        <li><a href="#">Outcomes</a></li>
-                        <li><a href="#">Collaborations</a></li>
-                        <li><a href="#">Syllabus</a></li>
-                        <li><a href="/Kanbas/Courses/Settings/details.html">Settings</a></li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <table width="100%">
-                        <tbody>
-                            <tr>
-                                <td valign="top">
-                                    <select id="select-gradebook">
-                                        <option select value="GRADEBOOK">Gradebook</option>
-                                     
-                                    </select>
-                                    <button type="button">Import</button>
-                                    <select id="select-export">
-                                        <option select value="EXPORT">Export</option>
-                                
-                                    </select>
-                                    <button type="button">Configure</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h4>Student Names</h4>
-                    <input type="studentname" placeholder="Search Students" id="text-fields-student-name"/> <br />
-                    <h4>Assignment Names</h4>
-                    <input type="assignmentname" placeholder="Search Assignments"
-                        id="text-fields-assignment-name"/><br /><br />
-                    <button>Apply Filters</button><br /><br />
-                    <table border="1" width="100%">
-                        <thead>
-                            <tr>
-                                <th>Student Name</th>
-                                <th>A1 SETUP Out of 100</th>
-                                <th>A2 HTML Out of 100</th>
-                                <th>A3 CSS Out of 100</th>
-                                <th>A4 BOOTSTRAP Out of 100</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Marco Alisdair</td>
-                                <td>100</td>
-                                <td><input value="95" /></td>
-                                <td>90</td>
-                                <td><input value="90" /></td>
-                            </tr>
-                            <tr>
-                                <td>Celia Bowen</td>
-                                <td><input value="100" /></td>
-                                <td>100</td>
-                                <td>97</td>
-                                <td>98</td>
-                            </tr>
-                            <tr>
-                                <td>Bailey Clarke</td>
-                                <td>100</td>
-                                <td><input value="100" /></td>
-                                <td>95</td>
-                                <td>95</td>
-                            </tr>
-                            <tr>
-                                <td>Penelope Murray</td>
-                                <td>100</td>
-                                <td>99</td>
-                                <td><input value="99" /></td>
-                                <td>97</td>
-                            </tr>
-                            <tr>
-                                <td>Winston Murray</td>
-                                <td>100</td>
-                                <td>99</td>
-                                <td><input value="98" /></td>
-                                <td>96</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="wd-flex-row-container">
+        <div>
+            <ul class="wd-kanbas-navigation">
+                <li><a href="/Kanbas/Account/AccountNavigation/index.html"><i class="fa fa-user"
+                            aria-hidden="true"></i>Account</a></li>
+                <li><a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+                <li class="wd-active"><a href="/Kanbas/Courses/CoursesNavigation/index.html"><i class="fa fa-book"
+                            aria-hidden="true"></i>Courses</a></li>
+                <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+                <li><a href="#"><i class="fa fa-inbox" aria-hidden="true"></i>Inbox</a></li>
+                <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>History</a></li>
+                <li><a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i>Studio</a></li>
+                <li><a href="#"><i class="fa fa-creative-commons" aria-hidden="true"></i>Commons</a></li>
+                <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="wd-course-navigation">
+                <li><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="/Kanbas/Courses/Assignments/index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Grades/grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="/Kanbas/Courses/Settings/details.html">Settings</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <select id="select-gradebook">
+                <option select value="GRADEBOOK">Gradebook</option>
+            </select>
+            <button type="button">Import</button>
+            <select>
+                <option>Export</option>
+                <option>UnPublish</option>
+            </select>
+
+            <button type="button">Configure</button><br />
+
+            Student Names<br />
+            <input type="studentname" placeholder="Search Students" id="text-fields-student-name" /> <br />
+            Assignment Names<br />
+            <input type="assignmentname" placeholder="Search Assignments"
+                id="text-fields-assignment-name" /><br /><br />
+            <button>Apply Filters</button><br /><br />
+
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>A1 SETUP Out of 100</th>
+                            <th>A2 HTML Out of 100</th>
+                            <th>A3 CSS Out of 100</th>
+                            <th>A4 BOOTSTRAP Out of 100</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Marco Alisdair</td>
+                            <td>100</td>
+                            <td><input value="95" /></td>
+                            <td>90</td>
+                            <td><input value="90" /></td>
+                        </tr>
+                        <tr>
+                            <td>Celia Bowen</td>
+                            <td><input value="100" /></td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>98</td>
+                        </tr>
+                        <tr>
+                            <td>Bailey Clarke</td>
+                            <td>100</td>
+                            <td><input value="100" /></td>
+                            <td>95</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>Penelope Murray</td>
+                            <td>100</td>
+                            <td>99</td>
+                            <td><input value="99" /></td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>Winston Murray</td>
+                            <td>100</td>
+                            <td>99</td>
+                            <td><input value="98" /></td>
+                            <td>96</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

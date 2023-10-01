@@ -27,4 +27,11 @@
 .wd-kanbas-navigation li a {
     color: white;
     text-decoration: none;
+
+}
+
+.wd-kanbas-navigation a i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
 }

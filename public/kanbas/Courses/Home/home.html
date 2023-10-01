@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
-    <link rel="stylesheet" href="/Kanbas/Courses/CoursesNavigation/index.css" />
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css"/>
+    <link rel="stylesheet" href="/Kanbas/Courses/CoursesNavigation/index.css"/>
+    <link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css"/>
 
 </head>
 
 <body>
+    <div class="d-block d-md-none">
+        <a href="/Kanbas/KanbasNavigation/index.html">Kanbas Navigator</a>
+        <a href="/Kanbas/Courses/CoursesNavigation/index.html">Course Navigator</a>
+      </div>
 
     <div class="wd-flex-row-container">
-        <div class="wd-bg-color-black">
-
+        <div class="wd-bg-color-black d-none d-md-block">
             <ul class="wd-kanbas-navigation">
                 <li><a href="/Kanbas/Account/AccountNavigation/index.html">Account</a></li>
                 <li class="wd-active"><a href="#">Dashboard</a></li>
@@ -29,7 +34,7 @@
 
         </div>
         <div>
-            <ul class="wd-course-navigation">
+            <ul class="wd-course-navigation d-none d-md-block">
                 <li class="wd-active"><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
                 <li><a href="#">Modules</a></li>
                 <li><a href="#">Piazza</a></li>
@@ -50,10 +55,12 @@
                 <li><a href="/Kanbas/Courses/Settings/details.html">Settings</a></li>
             </ul>
         </div>
-        <div class="wd-flex-grow-1"> <button type="button">Collapse All</button>
+        <div class="wd-flex-grow-1"> 
+            <button type="button">Collapse All</button>
             <button type="button">View Progress</button>
             <select>
-                <option value="all">Publish All</option>
+                <option>Publish All</option>
+                <option>UnPublish</option>
             </select>
             <button type="button">Module</button>
             <ul>
@@ -97,18 +104,13 @@
                 </ul>
             </ul>
         </div>
-        <div>
-            <h2>Course Status</h2>
-            <table width="100%">
-                <tbody>
-                    <tr>
-                        <td valign="top">
+        <div class="wd-flex-row-container d-none d-lg-block">
+            Course Status<br />
+           
                             <button type="button">Unpublish</button>
                             <button type="button">Published</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                  
+            
             <ul>
                 <li><a href="#">Import Existing Content</a></li>
                 <li><a href="#">Import From Commons</a></li>
@@ -118,7 +120,7 @@
                 <li><a href="#">New Analytics</a></li>
                 <li><a href="#">View Course Notifications</a></li>
             </ul>
-            <h2>Coming Up</h2>
+            Coming Up<br />
             <a href="#">View Calendar</a>
             <ul>
                 <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
