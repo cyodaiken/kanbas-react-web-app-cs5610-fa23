@@ -19,3 +19,7 @@ body {
 .wd-bg-color-black {
     background-color: black;
 }
+
+.wd-right-container-box {
+    margin-left: 15px;
+}

@@ -1,0 +1,45 @@
+.wd-kanbas-profile {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.wd-kanbas-profile a {
+    text-decoration: none;
+    color: #b52828;
+}
+
+.wd-kanbas-profile i.profile-icon {
+    color: gray;
+    font-size: 90px;
+}
+
+.wd-kanbas-profile p i {
+    color:#b52828;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.wd-kanbas-profile i.gray {
+    color: gray;
+}
+
+.wd-kanbas-profile i.red {
+    color: #b52828;
+}
+
+
+.wd-kanbas-profile p.name {
+    font-size: 30px;
+}
+
+.wd-kanbas-profile p.sections {
+    font-size: 22px;
+}
+
+/* .wd-kanbas-profile i {
+
+    color: gray;
+    font-size: 100px;
+    margin-bottom: 5px;
+
+} */

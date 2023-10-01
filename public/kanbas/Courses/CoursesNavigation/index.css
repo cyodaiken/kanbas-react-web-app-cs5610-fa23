@@ -1,8 +1,31 @@
-.wd-course-navigation {
+/* Bootstrap Overrides */
+
+
+.list-group {
+    border-radius: 0;
+}
+
+.wd-kanbas-course-navigation.list-group-item {
+    background-color: black;
+    border: none;
+    color: #b52828;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.wd-kanbas-course-navigation.list-group-item.active {
+    color: black;
+    background-color: white;
+    border-color: white;
+    border-left: 2px solid black;
+}
+
+/* .wd-course-navigation {
     background-color: white;
     list-style: none;
     padding: 0px;
-    width: 120px;
+    width: 195px;
     margin: 0px;
     margin-left: 20px;
 }
@@ -26,7 +49,7 @@
 }
 
 .wd-course-navigation a {
-    color: red;
+    color: #b52828;
     text-decoration: none;
-}
+} */
 

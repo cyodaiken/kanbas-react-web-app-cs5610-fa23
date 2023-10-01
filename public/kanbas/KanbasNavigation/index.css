@@ -1,37 +1,46 @@
+/* Bootstrap Overrides */
+
+.wd-kanbas-navigation.list-group {
+    border-radius: 0;
+}
+.wd-kanbas-navigation .list-group-item {
+    background-color: black;
+    border-color: black;
+}
+
 .wd-kanbas-navigation {
     background-color: black;
     list-style: none;
     padding: 0px;
-    width: 80px;
-    margin: 0px;
-    
-}
-
-.wd-kanbas-navigation li.wd-active {
-    background-color: white;
-}
-
-.wd-kanbas-navigation li.wd-active a {
-    color: red;
-    
+    width: 85px;
+    margin: 0px; 
 }
 
 .wd-kanbas-navigation li {
-    padding: 10px;
     font-size: 0.8em;
-    margin-bottom: 10px;
     text-align: center;
-    
+}
+
+.wd-kanbas-navigation li p {
+    margin: 0px;
 }
 
 .wd-kanbas-navigation li a {
     color: white;
     text-decoration: none;
+    padding: 5px;
+    margin-bottom: 5px;
 
 }
 
 .wd-kanbas-navigation a i {
-    color: red;
+    color: #b52828;
     font-size: 2em;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.wd-kanbas-navigation a i.white {
+    color: white;
+}
+
