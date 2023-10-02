@@ -51,11 +51,11 @@
                 </a></li>
         </ul>
 
-        <div class="flex-column wd-kanbas-assignments wd-right-container-box">
+        <div class="flex-column wd-kanbas-assignments wd-right-container-box w-100">
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i> CS5610</a>
+                    <li class="breadcrumb-item red"><i class="fa fa-bars red" aria-hidden="true"></i> CS5610
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">Assignments</li>
                 </ol>
@@ -86,17 +86,23 @@
                     <li><a href="/Kanbas/Courses/Settings/details.html">Settings</a></li>
                 </ul>
 
-                <div class="flex-column wd-kanbas-assignments">
+                <div class="flex-column wd-kanbas-assignments w-100">
 
-                    <div class="d-flex flex-wrap">
+                    <div class="row">
+                        <div class="col-5">
+                            <input type="assignment" class="form-control text-area-width"
+                                placeholder="Search for Assignments" id="text-fields-assignment" />
+                        </div>
 
-                        <input type="assignment" class="form-control text-area-width" placeholder="Search for Assignments "
-                            id="text-fields-assignment" />
-                        <button type="button" class="btn btn-light float-end"> <i class="fa fa-plus" aria-hidden="true"></i>  Group</button>
-                        <button type="button" class="btn btn-danger float-end"> <i class="fa fa-plus" aria-hidden="true"></i>  Assignment</button>
-                        <button type="button" class="btn btn-light float-end"><i class="fa fa-ellipsis-v"
-                                aria-hidden="true"></i>
-                        </button>
+                        <div class="col-7 align-items-end text-end">
+                            <button type="button" class="btn btn-light"> <i class="fa fa-plus" aria-hidden="true"></i>
+                                Group</button>
+                            <button type="button" class="btn btn-danger"> <i class="fa fa-plus" aria-hidden="true"></i>
+                                Assignment</button>
+                            <button type="button" class="btn btn-light"><i class="fa fa-ellipsis-v"
+                                    aria-hidden="true"></i>
+                            </button>
+                        </div>
                         <!-- <select id="edit-assignment" class="form-select">
                             <option value="dates">Edit Assignment Dates</option>
                             <option value="weight">Assignment Groups Weight</option>
@@ -110,7 +116,12 @@
 
                     <ul class="list-group">
 
-                        <li class="list-group-item list-group-item-secondary">Assignments 40% of Total </li>
+                        <li class="list-group-item list-group-item-secondary">
+                            <p class="assignment-title-text">Assignments</p>
+                            <span class="float-end border border-black rounded-pill">
+                                <p class="p-0 m-0 px-2">40% of Total</p>
+                            </span>
+                        </li>
 
                         <!-- <select>
                                 <option select value="EDIT">Edit</option>
@@ -124,21 +135,98 @@
                             </select>  -->
 
                         <ul class="list-group green-border">
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i><p>A1 SETUP</p><p class="assignment-subtext">Multiple Modules</p><p class="assignment-subtext">Due: Jan 2</p></a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                    <div class="row align-items-center">
+                                        <div class="col-1">
+                                            <i class="fa fa-book green" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-11">
+                                            <p class="assignment-title-text">A1 SETUP</p>
+                                            <p class="assignment-subtext">Multiple Modules</p>
+                                            <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>A2 HTML</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">A2 HTML</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>A3 CSS</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">A3 CSS</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>A4 BOOTSTRAP</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">A4 BOOTSTRAP</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>A5 JAVASCRIPT</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">A5 JAVASCRIPT</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item "><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>A6 REACT</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">A6 REACT</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
                         </ul>
 
-                        <li class="list-group-item list-group-item-secondary">Quizzes 10% of Total </li>
+                        <li class="list-group-item list-group-item-secondary">
+                            <p class="assignment-title-text">Quizzes</p>
+                            <span class="float-end border border-black rounded-pill">
+                                <p class="p-0 m-0 px-2">10% of Total</p>
+                            </span>
+                        </li>
 
                         <!-- <select>
                             <option select value="EDIT">Edit</option>
@@ -152,26 +240,84 @@
                         </select> -->
 
                         <ul class="list-group  green-border">
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Q1 - HTML</a>
-                            </li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Q1 HTML</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item "><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Q2 - CSS</a>
-                            </li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Q2 CSS</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Q3 - JS,ES6</a>
-                            </li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Q3 JAVASCRIPT</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Q4 - NODE</a>
-                            </li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Q4 NODE</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Q5 - MONGO</a>
-                            </li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Q% MONGO</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
                         </ul>
 
 
 
-                        <li class="list-group-item list-group-item-secondary">Exams 20% of Total </li>
+                        <li class="list-group-item list-group-item-secondary"><p class="assignment-title-text">Exams</p>
+                            <span class="float-end border border-black rounded-pill">
+                                <p class="p-0 m-0 px-2">20% of Total</p>
+                            </span></li>
                         <!-- <select>
                             <option select value="EDIT">Edit</option>
                             <option value="SPEEDGRADER">Speed Grader</option>
@@ -184,13 +330,40 @@
                         </select> -->
 
                         <ul class="list-group  green-border">
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Midterm</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Midterm</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Final</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">A1 SETUP</p>
+                                        <p class="assignment-subtext">Final</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
                         </ul>
 
-                        <li class="list-group-item list-group-item-secondary">Project 30% of Total </li>
+                        <li class="list-group-item list-group-item-secondary"><p class="assignment-title-text">Project</p>
+                            <span class="float-end border border-black rounded-pill">
+                                <p class="p-0 m-0 px-2">30% of Total</p>
+                            </span></li>
 
                         <!-- <select>
                             <option select value="EDIT">Edit</option>
@@ -204,7 +377,19 @@
                         </select> -->
 
                         <ul class="list-group green-border">
-                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html"><i class="fa fa-book green" aria-hidden="true"></i>Project</a></li>
+                            <li class="list-group-item"><a href="\Kanbas\Courses\Assignments\edit.html">
+                                <div class="row align-items-center">
+                                    <div class="col-1">
+                                        <i class="fa fa-book green" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-11">
+                                        <p class="assignment-title-text">Project</p>
+                                        <p class="assignment-subtext">Multiple Modules</p>
+                                        <p class="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                             <!-- <a href="#">Multiple Modules</a> | Not available yet -->
 
                         </ul>

@@ -1,3 +1,23 @@
 .wd-kanbas-grades nav {
     --bs-breadcrumb-divider: '>';
 }
+
+.wd-kanbas-grades input.edit-grade-width {
+    width: 80%;
+    margin-right: 5px;
+}
+
+.wd-kanbas-grades a {
+    color: #b52828;
+    text-decoration: none;
+}
+
+.wd-kanbas-grades li.red {
+    color: #b52828;
+}
+
+.wd-kanbas-grades i.red {
+    color: #b52828;
+    padding-left: 10px;
+    padding-right: 10px;
+}

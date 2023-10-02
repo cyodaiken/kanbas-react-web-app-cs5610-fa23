@@ -1,5 +1,19 @@
+.wd-kanbas-home {
+    padding-left: 5px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+}
+
 .wd-kanbas-home .list-group-item.padding-content {
     padding-left: 40px;
+}
+
+.wd-kanbas-home ul, li {
+    border-radius: 0px;
+}
+
+.wd-kanbas-home ol {
+    margin-top: 16px;
 }
 
 .wd-kanbas-home .list-group-item.gray {
@@ -12,6 +26,17 @@
     --bs-breadcrumb-divider: '>';
 }
 
+.wd-kanbas-home .list-group-item.no-border {
+    border: none;
+}
+
+.wd-kanbas-home p.small-text {
+    font-size: 10px;
+}
+
+.wd-kanbas-home p.no-margin-text {
+    margin: 0px;
+}
 .wd-kanbas-home a {
     color: #b52828;
     text-decoration: none;
@@ -23,20 +48,16 @@
 
 .wd-kanbas-home .list-group-item i {
     color: green;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .wd-kanbas-home .form-select {
     width: 130px;
 }
 
-.wd-kanbas-home {
-    padding-left: 5px;
-    padding-right: 10px;
-}
-
-
-
 .wd-kanbas-home i.red {
     color: #b52828;
-    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

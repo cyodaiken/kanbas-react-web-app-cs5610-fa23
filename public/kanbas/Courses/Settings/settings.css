@@ -1,0 +1,32 @@
+.wd-kanbas-settings {
+    margin: 5px;
+}
+
+.wd-kanbas-settings ul,
+li {
+    border-radius: 0px;
+}
+
+.wd-kanbas-settings ul.black-text li a  {
+    color: black;
+}
+
+.wd-kanbas-settings a {
+    color: #b52828;
+    text-decoration: none;
+}
+
+
+.wd-kanbas-settings nav {
+    --bs-breadcrumb-divider: '>';
+}
+
+.wd-kanbas-settings li.red {
+    color: #b52828;
+}
+
+.wd-kanbas-settings i.red {
+    color: #b52828;
+    padding-left: 10px;
+    padding-right: 10px;
+}

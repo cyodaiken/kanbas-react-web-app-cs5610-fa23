@@ -1,10 +1,30 @@
-/* 
-.wd-kanbas-assignments .list-group-item.padding-content{
-    padding-left: 40px;
-} */
+.wd-kanbas-assignments {
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.wd-kanbas-assignments ol {
+    margin-top: 16px;
+}
 
 .wd-kanbas-assignments nav {
     --bs-breadcrumb-divider: '>';
+}
+
+
+.wd-kanbas-assignments li,
+ul {
+    border-radius: 0px !important;
+}
+
+.wd-kanbas-assignments li.red {
+    color:#b52828;
+}
+
+.wd-kanbas-assignments span.rounded-pill {
+    position: absolute;
+    top: 7px;
+    right: 5px;
 }
 
 .wd-kanbas-assignments ul.green-border {
@@ -12,8 +32,13 @@
 }
 
 .wd-kanbas-assignments p.assignment-subtext {
-    font-size: 8px;
+    font-size: 10px;
+    margin: 0px;
+}
 
+
+.wd-kanbas-assignments p.assignment-title-text {
+    margin: 0px;
 }
 
 .wd-kanbas-assignments a {
@@ -21,12 +46,18 @@
     text-decoration: none;
 }
 
-.wd-kanbas-assignments .form-control.text-area-width{
+.wd-kanbas-assignments .form-control.text-area-width {
     width: 200px;
 }
 
 .wd-kanbas-assignments i.green {
     color: green;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wd-kanbas-assignments i.red {
+    color: #b52828;
     padding-left: 10px;
     padding-right: 10px;
 }
