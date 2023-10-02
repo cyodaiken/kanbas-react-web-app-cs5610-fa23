@@ -40,6 +40,19 @@
     margin-bottom: 5px;
 }
 
+/* .wd-kanbas-navigation li.highlighted {
+    background-color: white;
+} */
+
+.wd-kanbas-navigation li.highlighted a {
+    color: #b52828;
+    background-color: white;
+}
+
+.wd-kanbas-navigation li.highlighted a i {
+    color: #b52828;
+}
+
 .wd-kanbas-navigation a i.white {
     color: white;
 }

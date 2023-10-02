@@ -1,0 +1,37 @@
+.wd-dashboard {
+    height: 320px;
+    width: 250px;
+    margin: 15px;
+}
+
+.wd-dashboard-course-container {
+    max-width: 1200px;
+}
+
+.wd-dashboard p.card-text-title {
+    font-size: 15px;
+    color: rgb(89, 168, 210);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.wd-dashboard p.card-text-section {
+    font-size: 18px;
+    color:gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.wd-dashboard p.card-text-year {
+    font-size: 10px;
+    color: gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.wd-dashboard i {
+    color: gray;
+}
