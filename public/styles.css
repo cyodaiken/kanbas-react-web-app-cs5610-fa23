@@ -7,6 +7,11 @@ body {
     padding: 0;
 }
 
+li,
+ul {
+    border-radius: 0px !important;
+}
+
 .wd-flex-row-container {
     display: flex;
     flex-direction: row;
