@@ -1,62 +1,8 @@
-/* Bootstrap Overrides */
-
-
-/* .list-group {
-    border-radius: 0;
-} */
-
-/* .wd-kanbas-course-navigation.list-group-item {
-    background-color: black;
-    border: none;
-    color: #b52828;
-    text-decoration: none;
-    list-style: none;
-}
-
-.wd-kanbas-course-navigation.list-group-item.active {
-    color: black;
-    background-color: white;
-    border-color: white;
-    border-left: 2px solid black;
-} */
-
-/* .wd-course-navigation {
-    background-color: white;
-    list-style: none;
-    padding: 0px;
-    width: 195px;
-    margin: 0px;
-    margin-left: 20px;
-}
-
-.wd-course-navigation li {
-    padding-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-.wd-course-navigation li.wd-active {
-    border-left: 2px solid black;
-   
-}
-
-.wd-course-navigation li.wd-active a {
-    color: black;
-}
-
-.wd-course-navigation a {
-    color: #b52828;
-    text-decoration: none;
-} */
-
 .wd-course-navigation {
     background-color: white;
     list-style: none;
-    padding-right: 10px;
-    width: 170px;
+    /* padding-right: 10px; */
+    width: 180px;
     margin: 0px;
     /* margin-left: 20px; */
 }
@@ -73,6 +19,18 @@
     text-decoration: none;
 }
 
+.wd-course-navigation i.red {
+    color: #b52828;
+}
+
+.wd-course-navigation i.white {
+    color: white;
+}
+
+.wd-course-navigation a i {
+    padding-right: 5px;
+}
+
 .wd-course-navigation li.wd-active {
     border-left: 2px solid black;
 }
@@ -81,6 +39,3 @@
     color: black;
     font-weight: bold;
 }
-
-
-

@@ -1,7 +1,10 @@
 .wd-kanbas-home {
-    padding-left: 5px;
-    padding-right: 30px;
     padding-bottom: 5px;
+}
+
+
+.wd-kanbas-home .d-lg-block {
+    margin-left: 20px;
 }
 
 .wd-kanbas-home .list-group-item.padding-content {
@@ -31,7 +34,7 @@
 }
 
 .wd-kanbas-home p.small-text {
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .wd-kanbas-home p.no-margin-text {
@@ -46,10 +49,26 @@
     color: black;
 }
 
+.wd-kanbas-home i.green {
+    color: green;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.wd-kanbas-home i.white {
+    color: white;
+}
+
+
+
 .wd-kanbas-home .list-group-item i {
     color: green;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.wd-kanbas-home .list-group-item i.gray-color {
+    color: gray;
 }
 
 .wd-kanbas-home .form-select {

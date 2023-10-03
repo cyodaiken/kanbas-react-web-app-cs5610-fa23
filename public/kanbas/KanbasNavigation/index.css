@@ -16,6 +16,11 @@
     margin: 0px; 
 }
 
+.wd-kanbas-navigation li a.red {
+    color: #b52828;
+
+}
+
 .wd-kanbas-navigation li {
     font-size: 0.8em;
     text-align: center;
@@ -55,5 +60,9 @@
 
 .wd-kanbas-navigation a i.white {
     color: white;
+}
+
+.wd-kanbas-navigation a i.black {
+    color: black;
 }
 

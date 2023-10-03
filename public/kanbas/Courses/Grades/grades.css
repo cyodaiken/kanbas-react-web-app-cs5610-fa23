@@ -1,3 +1,8 @@
+
+.wd-kanbas-grades {
+    margin: 5px;
+}
+
 .wd-kanbas-grades nav {
     --bs-breadcrumb-divider: '>';
 }
