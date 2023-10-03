@@ -101,10 +101,10 @@
                 <hr />
 
                 <div class="flex-column wd-kanbas-assignments w-100">
-                    
+
                     <div class="row">
                         <div class="col align-items-end text-end">
-                           <i class="fa fa-check-circle green" aria-hidden="true"></i>Published
+                            <i class="fa fa-check-circle green" aria-hidden="true"></i>Published
                             <button type="button" class="btn btn-light"><i class="fa fa-ellipsis-v"
                                     aria-hidden="true"></i>
                             </button>
@@ -113,91 +113,184 @@
 
                     <hr />
 
-                    <label class="form-label" for="text-fields-assignmentname">Assignment Name</label>
-
                     <form action="\Kanbas\Courses\Assignments\index.html">
 
-                        <div class="">
-
-                            <input class="form-control" id="text-fields-assignmentname" value="A1 - ENV + HTML"
-                            placeholder="Assignment Name" /><br /><br />
+                        <label class="form-label" for="text-fields-assignmentname">Assignment Name</label>
+                        <input class="form-control" id="text-fields-assignmentname" value="A1 - ENV + HTML"
+                            placeholder="Assignment Name" /> <br /><br />
 
                         <textarea class="form-control">This is the assignment description.</textarea> <br />
-                   
 
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <label class="form-label" for="text-fields-points1">Points</label>
+                            </div>
+
+                            <div class="col-10">
+                                <input class="form-control" id="text-fields-points1" value="100" />
+                            </div>
                         </div>
 
-                
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <label class="form-label" for="assignmentgroup">Assignment Group</label>
+                            </div>
 
-                        <label class="form-label" for="text-fields-points">Points</label>
-                        <input class="from-control" id="text-fields-points" value="100" /><br /><br />
+                            <div class="col-10">
+                                <select class="form-select" id="assignmentgroup">
+                                    <option select value="ASSIGNMENTS">ASSIGNMENTS</option>
+                                    <option value="QUIZZES">QUIZZES</option>
+                                    <option value="EXAMS">EXAMS</option>
+                                    <option value="PROJECT">PROJECT</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <label class="form-label" for="assignmentgroup">Assignment Group</label>
-                        <select class="form-select" id="assignmentgroup">
-                            <option select value="ASSIGNMENTS">ASSIGNMENTS</option>
-                            <option value="QUIZZES">QUIZZES</option>
-                            <option value="EXAMS">EXAMS</option>
-                            <option value="PROJECT">PROJECT</option>
-                        </select> <br /><br />
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <label class="form-label" for="gradedisplay">Display Grade as</label>
+                            </div>
 
-                        <label class="form-label" for="gradedisplay">Display Grade as</label>
-                        <select class="form-select" id="gradedisplay">
-                            <option select value="PERCENTAGE">Percentage</option>
-                        </select><br /><br />
+                            <div class="col-10">
 
-                        <label class="form-label" for="submissiontype">Submission Type</label>
-                        <select class="form-select" id="submissiontype">
-                            <option select value="ONLINE">Online</option>
-                        </select><br /><br />
+                                <select class="form-select" id="gradedisplay">
+                                    <option select value="PERCENTAGE">Percentage</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        Online Entry Options<br />
-                        <input class="form-check-input" type="checkbox" value="TEXTENTRY" id="TextEntry" />
-                        <label class="form-check-label" for="TextEntry">Text Entry</label>
-                        <input class="form-check-input" type="checkbox" value="WEBSITE URL" id="WebsiteURL" />
-                        <label class="form-check-label" for="WebsiteURL">Website URL</label>
-                        <input class="form-check-input" type="checkbox" value="MEDIARECORDINGS" id="MediaRecordings" />
-                        <label class="form-check-label" for="MediaRecordings">Media
-                            Recordings</label>
-                        <input class="form-check-input" type="checkbox" value="STUDENTANNOTATION"
-                            id="StudentAnnotation" />
-                        <label class="form-check-label" for="StudentAnnotation">Student
-                            Annotation</label>
-                        <input class="form-check-input" type="checkbox" value="FILEUPLOAD" id="FileUploads" />
-                        <label class="form-check-label" for="FileUploads">File Uploads</label>
-                        <br /> <br />
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <label class="form-label" for="submissiontype">Submission Type</label>
+                            </div>
 
-                        <label class="form-label" for="submissionattemps">Submission Attempts</label>
-                        <select class="form-select" id="submissionattempts">
-                            <option select value="UNLIMITED">Unlimited</option>
-                        </select><br /><br />
+                            <div class="col-10">
 
-                        <label class="form-label" for="plagiarismreview">Plagiarism Review</label>
-                        <select class="form-select" id="plagiarismreview">
-                            <option select value="NONE">None</option>
-                        </select> <br /><br />
+                                <div class="container border p-3">
+                                    <select class="form-select" id="submissiontype">
+                                        <option select value="ONLINE">Online</option>
+                                    </select><br />
 
-                        Group Assignment<br />
-                        <input class="form-check-input" type="checkbox" value="GROUPASSIGN" id="GroupAssign" />
-                        <label class="form-check-label" for="GroupAssign"> This is a group
-                            assignment</label><br />
+                                    <p>Online Entry Options</p>
+                                    <input class="form-check-input" type="checkbox" value="TEXTENTRY" id="TextEntry" />
+                                    <label class="form-check-label" for="TextEntry">Text Entry</label> <br /><br />
+                                    <input class="form-check-input" type="checkbox" value="WEBSITE URL"
+                                        id="WebsiteURL" />
+                                    <label class="form-check-label" for="WebsiteURL">Website URL</label><br /><br />
+                                    <input class="form-check-input" type="checkbox" value="MEDIARECORDINGS"
+                                        id="MediaRecordings" />
+                                    <label class="form-check-label" for="MediaRecordings">Media
+                                        Recordings</label><br /><br />
+                                    <input class="form-check-input" type="checkbox" value="STUDENTANNOTATION"
+                                        id="StudentAnnotation" />
+                                    <label class="form-check-label" for="StudentAnnotation">Student
+                                        Annotation</label><br /><br />
+                                    <input class="form-check-input" type="checkbox" value="FILEUPLOAD"
+                                        id="FileUploads" />
+                                    <label class="form-check-label" for="FileUploads">File Uploads</label>
 
-                        Peer Reviews<br />
-                        <input class="form-check-input" type="checkbox" value="PEERREVIEW" id="PeerReview" />
-                        <label class="form-check-label" for="PeerReview">Require Peer Reviews</label>
-                        <br /> <br />
+                                    <div class="p-4">
+                                        <input class="form-check-input" type="checkbox" value="restrictFileTypes"
+                                            id="FileUploads" />
+                                        <label class="form-check-label" for="restrictFileTypes">Restrict File
+                                            Types</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        Assign<br />
-                        <label class="form-label" for="text-fields-assign">Assign to</label>
-                        <input class="form-control" id="text-fields-assign" value="Everyone" /><br /><br />
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <label class="form-label" for="submissionattemps">Submission Attempts</label>
+                            </div>
 
-                        <label class="form-label" for="due">Due</label>
-                        <input type="date" id="due" value="2021-01-01"> <br /> <br />
+                            <div class="col-10">
+                                <div class="container border p-3">
+                                    <p>Allow Attempts</p>
+                                    <select class="form-select" id="submissionattempts">
+                                        <option select value="UNLIMITED">Unlimited</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
-                        <label class="form-label" for="due">Available from:</label>
-                        <input type="date" id="due" value="2021-01-01"> <br /> <br />
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <label class="form-label" for="plagiarismreview">Plagiarism Review</label>
+                            </div>
 
-                        <label class="form-label" for="due">Until</label>
-                        <input type="date" id="due" value="2021-01-01"> <br /> <br />
+                            <div class="col-10">
+                                <div class="container border p-3">
+                                    <select class="form-select" id="plagiarismreview">
+                                        <option select value="NONE">None</option>
+                                    </select>
+                                    <hr />
+                                    <select class="form-select" id="plagiarismnotify">
+                                        <option select value="NONE">Immediately</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <p>Group Assignment</p>
+                            </div>
+
+                            <div class="col-10">
+                                <div class="container border p-3">
+                                    <input class="form-check-input" type="checkbox" value="GROUPASSIGN"
+                                        id="GroupAssign" />
+                                    <label class="form-check-label" for="GroupAssign"> This is a group
+                                        assignment</label><br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <p>Peer Reviews</p><br />
+                            </div>
+
+                            <div class="col-10">
+                                <div class="containter border p-3">
+                                    <input class="form-check-input" type="checkbox" value="PEERREVIEW"
+                                        id="PeerReview" />
+                                    <label class="form-check-label" for="PeerReview">Require Peer Reviews</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-3">
+                            <div class="col-2">
+                                <p>Assign</p>
+                            </div>
+
+                            <div class="col-10">
+                                <div class="containter border p-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label class="form-label" for="text-fields-assign">Assign to</label><br />
+                                            <input class="form-control" id="text-fields-assign" value="Everyone" />
+                                            <br />
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label" for="due">Due</label> <br />
+                                            <input type="date" id="due" value="2021-01-01"> <br /> <br />
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label" for="due">Available from:</label><br />
+                                            <input type="date" id="due" value="2021-01-01"> <br /> <br />
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label" for="due">Until</label> <br />
+                                            <input type="date" id="due" value="2021-01-01"> <br /> <br />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
 
                         <hr />
 
@@ -205,14 +298,16 @@
                         <label class="form-check-label" for="NotifyUsers">Notify users that this content has
                             changed</label>
 
-                        <button class="btn btn-danger float-end">Save</button> <button
-                            class="btn btn-light float-end">Cancel</button>
+                        <button class="btn btn-danger float-end">Save</button>
+                        <button class="btn btn-light float-end">Cancel</button>
                     </form>
-
                 </div>
 
+
             </div>
+
         </div>
+    </div>
 
 </body>
 

@@ -1,10 +1,8 @@
 .wd-course-navigation {
     background-color: white;
     list-style: none;
-    /* padding-right: 10px; */
     width: 180px;
     margin: 0px;
-    /* margin-left: 20px; */
 }
 
 .wd-course-navigation li {
@@ -27,8 +25,21 @@
     color: white;
 }
 
+.wd-course-navigation i.gray {
+    color: gray;
+}
+
+.wd-course-navigation i.black {
+    color: black;
+}
+
 .wd-course-navigation a i {
     padding-right: 5px;
+}
+
+.wd-course-navigation .list-group-item {
+
+    border: none;
 }
 
 .wd-course-navigation li.wd-active {

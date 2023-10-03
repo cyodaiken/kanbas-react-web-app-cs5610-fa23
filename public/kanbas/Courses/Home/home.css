@@ -2,7 +2,6 @@
     padding-bottom: 5px;
 }
 
-
 .wd-kanbas-home .d-lg-block {
     margin-left: 20px;
 }
@@ -11,7 +10,8 @@
     padding-left: 40px;
 }
 
-.wd-kanbas-home ul, li {
+.wd-kanbas-home ul,
+li {
     border-radius: 0px;
 }
 
@@ -40,6 +40,7 @@
 .wd-kanbas-home p.no-margin-text {
     margin: 0px;
 }
+
 .wd-kanbas-home a {
     color: #b52828;
     text-decoration: none;
@@ -58,8 +59,6 @@
 .wd-kanbas-home i.white {
     color: white;
 }
-
-
 
 .wd-kanbas-home .list-group-item i {
     color: green;

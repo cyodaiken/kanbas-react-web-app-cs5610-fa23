@@ -14,7 +14,7 @@
 }
 
 .wd-kanbas-profile p i {
-    color:#b52828;
+    color: #b52828;
     padding-right: 10px;
     font-size: 20px;
 }
@@ -35,11 +35,3 @@
 .wd-kanbas-profile p.sections {
     font-size: 22px;
 }
-
-/* .wd-kanbas-profile i {
-
-    color: gray;
-    font-size: 100px;
-    margin-bottom: 5px;
-
-} */

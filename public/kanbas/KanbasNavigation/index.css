@@ -1,24 +1,22 @@
-/* Bootstrap Overrides */
-
-.wd-kanbas-navigation.list-group {
-    border-radius: 0;
-}
-.wd-kanbas-navigation .list-group-item {
-    background-color: black;
-    border-color: black;
-}
-
 .wd-kanbas-navigation {
     background-color: black;
     list-style: none;
     padding: 0px;
     width: 85px;
-    margin: 0px; 
+    margin: 0px;
+}
+
+.wd-kanbas-navigation .list-group {
+    border-radius: 0;
+}
+
+.wd-kanbas-navigation .list-group-item {
+    background-color: black;
+    border-color: black;
 }
 
 .wd-kanbas-navigation li a.red {
     color: #b52828;
-
 }
 
 .wd-kanbas-navigation li {
@@ -35,7 +33,6 @@
     text-decoration: none;
     padding: 5px;
     margin-bottom: 5px;
-
 }
 
 .wd-kanbas-navigation a i {
@@ -44,10 +41,6 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
-/* .wd-kanbas-navigation li.highlighted {
-    background-color: white;
-} */
 
 .wd-kanbas-navigation li.highlighted a {
     color: #b52828;
@@ -65,4 +58,3 @@
 .wd-kanbas-navigation a i.black {
     color: black;
 }
-

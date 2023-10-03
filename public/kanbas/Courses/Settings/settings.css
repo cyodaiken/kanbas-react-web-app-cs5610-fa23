@@ -7,7 +7,7 @@ li {
     border-radius: 0px;
 }
 
-.wd-kanbas-settings ul.black-text li a  {
+.wd-kanbas-settings ul.black-text li a {
     color: black;
 }
 
@@ -15,7 +15,6 @@ li {
     color: #b52828;
     text-decoration: none;
 }
-
 
 .wd-kanbas-settings nav {
     --bs-breadcrumb-divider: '>';
