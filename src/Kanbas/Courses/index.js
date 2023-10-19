@@ -15,7 +15,7 @@ function Courses() {
     const course = db.courses.find((course) => course._id === courseId);
 
 
-    console.log("pathname", pathname);
+    // console.log("pathname", pathname);
 
     const createBreadcrumb = () => {
         const path = pathname.split("/");

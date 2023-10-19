@@ -1,5 +1,10 @@
 import "./modules.css";
-
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { TiCancel } from "react-icons/ti";
+import { BiImport } from "react-icons/bi";
+import { BsLifePreserver, BsFileBarGraph, BsBellFill } from "react-icons/bs";
+import { TfiAnnouncement } from "react-icons/tfi";
+import { AiTwotoneCalendar } from "react-icons/ai";
 
 function CourseStatus() {
 
@@ -11,55 +16,54 @@ function CourseStatus() {
             <div className="row">
                 <div className="d-flex flex-row">
                     <button type="button" className="btn btn-light">
-                        Unpublish</button>
+                        <TiCancel /> Unpublish</button>
                     <button type="button" className="btn btn-success">
-                        Published</button>
+                        <IoIosCheckmarkCircleOutline /> Published</button>
                 </div>
             </div>
 
             <div className="col">
                 <div className="d-flex flex-column">
                     <button type="button" className="btn btn-light">
-                        Import Existing Content
+                        <BiImport /> Import Existing Content
                     </button>
                     <button type="button" className="btn btn-light">
-                        Import From Commons</button>
+                        <BiImport /> Import From Commons</button>
                     <button type="button" className="btn btn-light">
-                        Choose Home Page</button>
+                        <BsLifePreserver /> Choose Home Page</button>
                     <button type="button" className="btn btn-light">
-                        View Course Stream</button>
+                        <BsFileBarGraph /> View Course Stream</button>
                     <button type="button" className="btn btn-light">
-                        New Announcement</button>
+                        <TfiAnnouncement /> New Announcement</button>
                     <button type="button" className="btn btn-light">
-                        New Analytics</button>
+                        < BsFileBarGraph /> New Analytics</button>
                     <button type="button" className="btn btn-light">
-                        View Course Notifications</button>
+                        <BsBellFill /> View Course Notifications</button>
                 </div >
             </div>
 
             <br />
 
-            <p className="small-text"> Coming Up <a href="#" className="text-red"> View
-                Calendar</a></p>
+            <p className="small-text"> Coming Up <a href="#" className="text-red float-end"> <AiTwotoneCalendar /> View Calendar</a></p>
             <hr />
 
             <ul className="list-group">
                 <li className="list-group-item border-0"><a href="#" className="text-red">
-                    <p>Lecture </p>
+                    <p><AiTwotoneCalendar /> Lecture</p>
                 </a>
                     <p className="small-text">CS4550.12631.202410 Sep
                         7 at 11:45am</p>
 
                 </li>
                 <li className="list-group-item border-0"><a href="#" className="text-red">
-                    <p>Lecture </p>
+                    <p><AiTwotoneCalendar /> Lecture</p>
                 </a>
                     <p className="small-text">CS4550.12631.202410 Sep
                         7 at 11:45am</p>
 
                 </li>
                 <li className="list-group-item border-0"><a href="#" className="text-red">
-                    <p>Lecture </p>
+                    <p><AiTwotoneCalendar /> Lecture</p>
                 </a>
                     <p className="small-text">CS4550.12631.202410 Sep
                         7 at 11:45am</p>

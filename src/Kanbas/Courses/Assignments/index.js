@@ -32,26 +32,25 @@ function Assignments() {
 
             <div className="list-group">
                 <li className="list-group-item list-group-item-secondary">
-                    Assignments  <span class="float-end border border-black rounded-pill">
-                        <p class="p-0 m-0 px-2">40% of Total</p>
+                    Assignments  <span className="float-end border border-black rounded-pill">
+                        <p className="p-0 m-0 px-2">40% of Total</p>
                     </span>
                 </li>
                 {courseAssignments.map((assignment) => (
-                    <>
-                        <Link
-                            key={assignment._id}
-                            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                            className="list-group-item green-left-border">
-                            <div className="row">
-                                <div className="col-1"><FaBook /></div>
-                                <div className="col-11">
-                                    {assignment.title}
-                                    <p className="assignment-subtext">Multiple Modules</p>
-                                    <p className="assignment-subtext">Due: Jan 2 | 100 pts</p>
-                                </div>
+
+                    <Link
+                        key={assignment._id}
+                        to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                        className="list-group-item green-left-border">
+                        <div className="row">
+                            <div className="col-1"><FaBook /></div>
+                            <div className="col-11">
+                                {assignment.title}
+                                <p className="assignment-subtext">Multiple Modules</p>
+                                <p className="assignment-subtext">Due: Jan 2 | 100 pts</p>
                             </div>
-                        </Link>
-                    </>
+                        </div>
+                    </Link>
 
                 ))}
             </div>

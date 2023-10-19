@@ -4,10 +4,11 @@ import "./courseNavigation.css";
 function CourseNavigation() {
     const links = ["Home", "Modules", "Piazza", "Zoom Meetings", "Assignments", "Quizzes", "Grades", "People", "Panopto Video", "Discussions", "Announcements", "Pages", "Files", "Rubrics", "Outcomes", "Collaborations", "Syllabus", "Settings"];
 
+
     const { courseId } = useParams();
     const { pathname } = useLocation();
     return (
-        <div className="wd-course-navigation list-group" >
+        <div className="wd-course-navigation list-group d-none d-md-flex">
             {links.map((link, index) => (
                 <Link
                     key={index}

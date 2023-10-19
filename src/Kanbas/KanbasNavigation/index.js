@@ -22,7 +22,7 @@ function KanbasNavigation() {
     
     const { pathname } = useLocation();
     return (
-        <div className="list-group wd-kanbas-navigation">
+        <div className="list-group wd-kanbas-navigation d-none d-md-flex">
 
         <img src="/images/NU_RGB.png" />
 
