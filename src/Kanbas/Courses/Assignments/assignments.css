@@ -1,0 +1,25 @@
+.wd-assignments {
+    margin-left: 5px;
+}
+
+.wd-assignments .list-group-item {
+    border-radius: 0px !important;
+}
+
+.wd-assignments .list-group-item.green-left-border {
+    border-left: 2px solid green;
+   
+}
+
+.wd-assignments input.checkbox-margin {
+    margin: 5px;
+}
+
+.wd-assignments button {
+    margin: 5px;
+}
+
+.wd-assignments p.assignment-subtext {
+    font-size: 10px;
+    margin: 0px;
+}

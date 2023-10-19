@@ -1,0 +1,27 @@
+.wd-modules {
+    margin: 5px;
+}
+
+.wd-modules a {
+    text-decoration: none;
+}
+
+.wd-modules a.text-red {
+    color: #b52828;
+}
+
+.wd-modules button {
+    margin: 2px;
+}
+
+.wd-modules .list-group {
+    border-radius: 0px;
+}
+
+.wd-modules .wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-modules p.small-text {
+    font-size: 12px;
+}

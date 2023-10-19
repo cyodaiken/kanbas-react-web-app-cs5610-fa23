@@ -1,12 +1,14 @@
 import ModuleList from "../Modules/ModuleList";
+import CourseStatus from "../Modules/CourseStatus";
 
 function Home() {
-    return (
-        <div>
-            <h2>Home</h2>
+
+    return(
+        <>
             <ModuleList />
-            <h2>Status</h2>
-        </div>
+            <CourseStatus />
+        </>
     );
+
 }
 export default Home;

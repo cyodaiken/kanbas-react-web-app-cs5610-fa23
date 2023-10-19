@@ -1,0 +1,38 @@
+.wd-dashboard {
+
+    margin: 15px;
+}
+
+.wd-dashboard .card {
+    width: 270px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.wd-dashboard a {
+    text-decoration: none;
+    color: rgb(89, 168, 210);
+
+    font-weight: 500;
+}
+
+.wd-dashboard p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wd-dashboard .wd-icon {
+    color: gray;
+
+}
+
+.wd-dashboard p.card-text-section {
+    font-size: 16px;
+    color: gray;
+}
+
+.wd-dashboard p.card-text-year {
+    font-size: 10px;
+    color: gray; 
+}

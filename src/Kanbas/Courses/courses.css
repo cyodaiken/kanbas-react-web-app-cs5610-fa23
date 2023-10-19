@@ -1,0 +1,23 @@
+.wd-courses {
+    margin: 10px;
+}
+
+.wd-courses nav .breadcrumb-item {
+    --bs-breadcrumb-divider: '>';
+}
+
+.wd-courses nav .breadcrumb-item.active {
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 0px;
+}
+
+.wd-courses span.red-color {
+    color:#b52828;
+}
+
+.wd-courses .wd-icon {
+    color: #b52828;
+    font-size: 1.8em;
+    margin-right: 5px;
+}
