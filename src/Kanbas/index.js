@@ -1,36 +1,52 @@
 import { Routes, Route, Navigate, Location, useLocation } from "react-router";
 import KanbasNavigation from "./KanbasNavigation";
 import Account from "./Account";
-import Dashboard from "./Dashboard";
+import EditDashboard from "./Dashboard/Edit/edit.js";
+import Dashboard from "./Dashboard/View";
 import Courses from "./Courses";
-import { AiOutlineClose } from "react-icons/ai";
 import { BsChevronDown } from "react-icons/bs";
 import { FaBars } from "react-icons/fa6";
 import "./kanbas.css";
+import db from "./Database";
+import { useState } from "react";
 
 function Kanbas() {
+
     const { pathname } = useLocation();
-
-    // console.log(pathname);
-
     const createBreadcrumb = () => {
         const path = pathname.split("/");
-
         return path[path.length - 1];
-
     };
-
-
-    // console.log(createBreadcrumb());
+    const [courses, setCourses] = useState(db.courses);
+    const [course, setCourse] = useState({
+        name: "New Course", number: "New Number",
+        startDate: "2023-09-10", endDate: "2023-12-15",
+    });
+    const addNewCourse = () => {
+        setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
+    };
+    const deleteCourse = (courseId) => {
+        setCourses(courses.filter((course) => course._id !== courseId));
+    };
+    const updateCourse = () => {
+        setCourses(
+            courses.map((c) => {
+                if (c._id === course._id) {
+                    return course;
+                } else {
+                    return c;
+                }
+            })
+        );
+    };
 
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-100 d-md-none">
                 <div className="wd-kanbas container-fluid">
                     <a href="#"><FaBars /></a>
-                    {/* <p style="color: white">CS 5610</p> */}
                     <p>{createBreadcrumb()}</p>
-             
+
                     <a href="#"><BsChevronDown /></a>
                 </div>
             </nav>
@@ -46,9 +62,17 @@ function Kanbas() {
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
                     <Route path="Account" element={<Account />} />
-                    <Route path="Dashboard" element={<Dashboard />} />
-                    <Route path="Courses/:courseId/*" element={<Courses />} />
-                    {/* <Route path="/Calendar" element={<h1>Calendar</h1>} /> */}
+                    <Route path="Dashboard/*" element={<Dashboard courses={courses}
+                    />} />
+                    <Route path="EditDashboard/*" element={<EditDashboard
+                        courses={courses}
+                        course={course}
+                        setCourse={setCourse}
+                        addNewCourse={addNewCourse}
+                        deleteCourse={deleteCourse}
+                        updateCourse={updateCourse} />
+                    } />
+                    <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
                 </Routes>
             </div>
 

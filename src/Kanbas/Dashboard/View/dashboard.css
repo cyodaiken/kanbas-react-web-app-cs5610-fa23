@@ -1,6 +1,9 @@
 .wd-dashboard {
-
     margin: 15px;
+}
+
+.wd-dashboard a {
+    text-decoration: none;
 }
 
 .wd-dashboard .card {
@@ -9,14 +12,15 @@
     margin-top: 10px;
 }
 
-.wd-dashboard a {
-    text-decoration: none;
-    color: rgb(89, 168, 210);
-
-    font-weight: 500;
+.wd-dashboard .card-body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.wd-dashboard p {
+.wd-dashboard .card a {  
+    color: rgb(89, 168, 210);
+    font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -24,15 +28,20 @@
 
 .wd-dashboard .wd-icon {
     color: gray;
-
 }
 
 .wd-dashboard p.card-text-section {
     font-size: 16px;
     color: gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .wd-dashboard p.card-text-year {
     font-size: 10px;
     color: gray; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }

@@ -9,19 +9,15 @@ import Grades from "./Grades";
 import "./courses.css";
 import { IoReorderThreeOutline } from "react-icons/io5";
 
-function Courses() {
+function Courses( {courses}) {
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const course = db.courses.find((course) => course._id === courseId);
-
-
-    // console.log("pathname", pathname);
+    const course = courses.find((course) => course._id === courseId);
 
     const createBreadcrumb = () => {
         const path = pathname.split("/");
 
         return decodeURI(path[path.length - 1]);
-
     };
 
     return (
@@ -37,7 +33,6 @@ function Courses() {
             </div>
 
             <hr className="w-100" />
-            {/* <h1>Course {course.name}</h1> */}
             <div className = "d-flex flex-row">
                 <CourseNavigation />
                 <Routes>
