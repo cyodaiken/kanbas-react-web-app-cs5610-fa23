@@ -1,6 +1,4 @@
 import "./modules.css";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { TiCancel } from "react-icons/ti";
 import { BiImport } from "react-icons/bi";
 import { BsLifePreserver, BsFileBarGraph, BsBellFill } from "react-icons/bs";
 import { TfiAnnouncement } from "react-icons/tfi";
@@ -9,16 +7,14 @@ import { AiTwotoneCalendar } from "react-icons/ai";
 function CourseStatus() {
 
     return (
-        <div className="d-flex flex-column d-none d-lg-block wd-modules">
+        <div className="d-flex flex-column d-none d-lg-block px-2 wd-modules">
 
             <p>Course Status</p>
 
             <div className="row">
                 <div className="d-flex flex-row">
-                    <button type="button" className="btn btn-light">
-                        <TiCancel /> Unpublish</button>
-                    <button type="button" className="btn btn-success">
-                        <IoIosCheckmarkCircleOutline /> Published</button>
+                    <button type="button" className="btn btn-light">Unpublish</button>
+                    <button type="button" className="btn btn-success">Published</button>
                 </div>
             </div>
 

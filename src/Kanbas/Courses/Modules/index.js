@@ -5,12 +5,7 @@ import "./modules.css";
 
 function Modules() {
     return (
-        <>
             <ModuleList />
-
-        </>
-
-
     );
 };
 
