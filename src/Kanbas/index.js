@@ -9,6 +9,8 @@ import { FaBars } from "react-icons/fa6";
 import "./kanbas.css";
 import db from "./Database";
 import { useState } from "react";
+import store from "./store";
+import { Provider } from "react-redux";
 
 function Kanbas() {
 
@@ -41,7 +43,7 @@ function Kanbas() {
     };
 
     return (
-        <>
+        <Provider store={store}>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-100 d-md-none">
                 <div className="wd-kanbas container-fluid">
                     <a href="#"><FaBars /></a>
@@ -76,7 +78,7 @@ function Kanbas() {
                 </Routes>
             </div>
 
-        </>
+        </Provider>
     );
 };
 

@@ -5,39 +5,47 @@ import "./modules.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { useSelector, useDispatch } from "react-redux";
+import { addModule, deleteModule, updateModule, setModule } from "./modulesReducer";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const [modules, setModules] = useState(db.modules);
-    const [module, setModule] = useState({
-        name: "New Module",
-        description: "New Description",
-        course: courseId,
-    });
 
-    const addModule = (module) => {
-        setModules([
-            { ...module, _id: new Date().getTime().toString() },
-            ...modules,
-        ]);
-    };
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
 
-    const deleteModule = (moduleId) => {
-        setModules(modules.filter(
-            (module) => module._id !== moduleId));
-    };
 
-    const updateModule = () => {
-        setModules(
-            modules.map((m) => {
-                if (m._id === module._id) {
-                    return module;
-                } else {
-                    return m;
-                }
-            })
-        );
-    }
+    // const [modules, setModules] = useState(db.modules);
+    // const [module, setModule] = useState({
+    //     name: "New Module",
+    //     description: "New Description",
+    //     course: courseId,
+    // });
+
+    // const addModule = (module) => {
+    //     setModules([
+    //         { ...module, _id: new Date().getTime().toString() },
+    //         ...modules,
+    //     ]);
+    // };
+
+    // const deleteModule = (moduleId) => {
+    //     setModules(modules.filter(
+    //         (module) => module._id !== moduleId));
+    // };
+
+    // const updateModule = () => {
+    //     setModules(
+    //         modules.map((m) => {
+    //             if (m._id === module._id) {
+    //                 return module;
+    //             } else {
+    //                 return m;
+    //             }
+    //         })
+    //     );
+    // }
 
     return (
         <div className="wd-modules d-flex flex-column px-2 w-100">
@@ -46,21 +54,21 @@ function ModuleList() {
                 <div className="row">
                     <div className="col-7">
                         <input className="form-control" value={module.name}
-                            onChange={(e) => setModule({
+                            onChange={(e) => dispatch(setModule({
                                 ...module, name: e.target.value
-                            })}
+                            }))}
                         />
                     </div>
-                    <button className="btn btn-secondary col-2" onClick={() => { updateModule(module) }}>Update</button>
-                    <button className="btn btn-success col-2" onClick={() => { addModule(module) }}>Add</button>
+                    <button className="btn btn-secondary col-2" onClick={() => dispatch(updateModule(module))}>Update</button>
+                    <button className="btn btn-success col-2" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
                 </div>
 
                 <div className="row mb-5">
                     <div className="col-7">
                         <textarea className="form-control" value={module.description}
-                            onChange={(e) => setModule({
+                            onChange={(e) => dispatch(setModule({
                                 ...module, description: e.target.value
-                            })}
+                            }))}
                         />
                     </div>
                 </div>
@@ -89,13 +97,14 @@ function ModuleList() {
                                         <div key={index} >
                                             <li className="list-group-item list-group-item-secondary">
                                                 <p>
-                                                    {module.name} 
+                                                    {module.name}
                                                     <button className="float-end btn btn-danger"
-                                                        onClick={() => deleteModule(module._id)}>
+                                                        onClick={() => dispatch(deleteModule(module._id))}>
                                                         Delete
                                                     </button>
+
                                                     <button className="float-end btn btn-secondary"
-                                                        onClick={(event) => { setModule(module); }}>
+                                                        onClick={() => dispatch(setModule(module))}>
                                                         Edit
                                                     </button>
 
