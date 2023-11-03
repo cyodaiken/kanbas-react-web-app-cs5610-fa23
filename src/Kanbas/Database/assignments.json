@@ -2,46 +2,91 @@
     {
         "_id": "A101",
         "title": "Propulsion Assignment",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS101"
     },
     {
         "_id": "A102",
         "title": "Combustion Analysis",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS101"
     },
     {
         "_id": "A103",
         "title": "Nozzle Design Project",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS101"
     },
     {
         "_id": "A201",
         "title": "Aerodynamics Quiz",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS102"
     },
     {
         "_id": "A202",
         "title": "Flow Analysis",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS102"
     },
     {
         "_id": "A203",
         "title": "Heating Analysis",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS102"
     },
     {
         "_id": "A301",
         "title": "Structural Design Task",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS103"
     },
     {
         "_id": "A302",
         "title": "Orbital Calculations",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS103"
     },
     {
         "_id": "A303",
         "title": "Systems Engineering Exam",
+        "description": "myDescription",
+        "points": "100",
+        "due_date": "2023-12-10",
+        "available_from": "2023-10-30",
+        "available_until": "2023-12-15",
         "course": "RS103"
     }
 ]

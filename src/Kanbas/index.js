@@ -48,24 +48,16 @@ function Kanbas() {
                 <div className="wd-kanbas container-fluid">
                     <a href="#"><FaBars /></a>
                     <p>{createBreadcrumb()}</p>
-
                     <a href="#"><BsChevronDown /></a>
                 </div>
             </nav>
-
-            {/* <nav className="navbar navbar-expand-lg navbar-light bg-white w-100 float-end">
-                <div className="row w-100 align-items-end float-end">
-                    <a href="/Kanbas/Courses/Home/home.html"><AiOutlineClose /></a>
-                </div>
-            </nav> */}
 
             <div className="d-flex">
                 <KanbasNavigation />
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
                     <Route path="Account" element={<Account />} />
-                    <Route path="Dashboard/*" element={<Dashboard courses={courses}
-                    />} />
+                    <Route path="Dashboard/*" element={<Dashboard courses={courses} />} />
                     <Route path="EditDashboard/*" element={<EditDashboard
                         courses={courses}
                         course={course}

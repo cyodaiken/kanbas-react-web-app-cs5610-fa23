@@ -1,17 +1,20 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
+import { useSelector, useDispatch } from 'react-redux';
+import "./assignments.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
-import "./assignments.css";
 import { FaBook } from "react-icons/fa";
-
+import { deleteAssignment } from "../Assignments/assignmentsReducer";
 
 function Assignments() {
     const { courseId } = useParams();
-    const assignments = db.assignments;
+    const dispatch = useDispatch();
+    const assignments = useSelector(state => state.assignmentsReducer.assignments);
+    console.log(assignments);
     const courseAssignments = assignments.filter(
         (assignment) => assignment.course === courseId);
+
     return (
         <div className="wd-assignments w-100">
             <div className="row">
@@ -23,8 +26,10 @@ function Assignments() {
                 <div className="col-7 align-items-end text-end">
                     <button type="button" className="btn btn-light">
                         <AiOutlinePlus />Group</button>
-                    <button type="button" className="btn btn-danger">
-                        Assignment</button>
+
+                    <Link to={`/Kanbas/Courses/${courseId}/Assignments/new`}><button type="button" className="btn btn-danger">
+                        <AiOutlinePlus />Assignment</button></Link>
+
                     <button type="button" className="btn btn-light"><BsThreeDotsVertical />
                     </button>
                 </div>
@@ -45,13 +50,13 @@ function Assignments() {
                         <div className="row">
                             <div className="col-1"><FaBook /></div>
                             <div className="col-11">
-                                {assignment.title}
-                                <p className="assignment-subtext">Multiple Modules</p>
-                                <p className="assignment-subtext">Due: Jan 2 | 100 pts</p>
+                                {assignment.title}<button className="btn btn-danger float-end" onClick={(e) => { e.preventDefault(); dispatch(deleteAssignment(assignment._id)); }}>Delete</button>
+                                <p className="assignment-subtext">{assignment.description}</p>
+                                <p className="assignment-subtext">Due: {assignment.due_date}</p>
+
                             </div>
                         </div>
                     </Link>
-
                 ))}
             </div>
         </div>

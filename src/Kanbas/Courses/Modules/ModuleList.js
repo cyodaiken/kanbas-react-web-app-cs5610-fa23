@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import "./modules.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -9,43 +8,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { addModule, deleteModule, updateModule, setModule } from "./modulesReducer";
 
 function ModuleList() {
+    
     const { courseId } = useParams();
-
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
-
-
-    // const [modules, setModules] = useState(db.modules);
-    // const [module, setModule] = useState({
-    //     name: "New Module",
-    //     description: "New Description",
-    //     course: courseId,
-    // });
-
-    // const addModule = (module) => {
-    //     setModules([
-    //         { ...module, _id: new Date().getTime().toString() },
-    //         ...modules,
-    //     ]);
-    // };
-
-    // const deleteModule = (moduleId) => {
-    //     setModules(modules.filter(
-    //         (module) => module._id !== moduleId));
-    // };
-
-    // const updateModule = () => {
-    //     setModules(
-    //         modules.map((m) => {
-    //             if (m._id === module._id) {
-    //                 return module;
-    //             } else {
-    //                 return m;
-    //             }
-    //         })
-    //     );
-    // }
 
     return (
         <div className="wd-modules d-flex flex-column px-2 w-100">

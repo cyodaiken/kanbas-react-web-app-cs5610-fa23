@@ -25,9 +25,7 @@ function EditDashboard({ courses, course, setCourse, addNewCourse,
                 {courses.map((course) => (
                     <Link className="list-group-item" key={course._id}
                         to={`/Kanbas/Courses/${course._id}`}>
-
                         {course.name}
-
                         <button className="btn btn-danger float-end" onClick={(event) => { event.preventDefault(); deleteCourse(course._id); }}>
                             Delete
                         </button>
