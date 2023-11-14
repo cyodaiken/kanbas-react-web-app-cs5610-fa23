@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate, useParams, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -7,18 +8,32 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import "./courses.css";
 import { IoReorderThreeOutline } from "react-icons/io5";
+import axios from "axios";
 import { addAssignment, deleteAssignment, selectAssignment, updateAssignment } from "./Assignments/assignmentsReducer";
 
-function Courses({ courses }) {
+function Courses() {
+
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const course = courses.find((course) => course._id === courseId);
+    const [course, setCourse] = useState({});
+    const URL = "http://localhost:4000/api/courses";
+
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
 
     const createBreadcrumb = () => {
         const path = pathname.split("/");
-
         return decodeURI(path[path.length - 1]);
     };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
 
     return (
         <div className="wd-courses w-100">
