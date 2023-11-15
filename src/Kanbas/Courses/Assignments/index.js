@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import { removeAssignment, findAssignmentsForCourse } from './client.js';
+import { deleteAssignment, selectAssignment, setAssignments } from "../Assignments/assignmentsReducer";
 import "./assignments.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FaBook } from "react-icons/fa";
-import { deleteAssignment } from "../Assignments/assignmentsReducer";
 
 function Assignments() {
     const { courseId } = useParams();
     const dispatch = useDispatch();
     const assignments = useSelector(state => state.assignmentsReducer.assignments);
-    console.log(assignments);
+
     const courseAssignments = assignments.filter(
         (assignment) => assignment.course === courseId);
+
+    const handleDeleteAssignment = (assignmentId) => {
+        removeAssignment(assignmentId).then((status) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
+    };
+
+
+    useEffect(() => {
+        findAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
 
     return (
         <div className="wd-assignments w-100">
@@ -50,7 +65,7 @@ function Assignments() {
                         <div className="row">
                             <div className="col-1"><FaBook /></div>
                             <div className="col-11">
-                                {assignment.title}<button className="btn btn-danger float-end" onClick={(e) => { e.preventDefault(); dispatch(deleteAssignment(assignment._id)); }}>Delete</button>
+                                {assignment.title}<button className="btn btn-danger float-end" onClick={(e) => { e.preventDefault(); handleDeleteAssignment(assignment._id); }}>Delete</button>
                                 <p className="assignment-subtext">{assignment.description}</p>
                                 <p className="assignment-subtext">Due: {assignment.due_date}</p>
 

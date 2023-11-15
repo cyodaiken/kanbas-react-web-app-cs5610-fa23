@@ -9,7 +9,6 @@ import Grades from "./Grades";
 import "./courses.css";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import axios from "axios";
-import { addAssignment, deleteAssignment, selectAssignment, updateAssignment } from "./Assignments/assignmentsReducer";
 
 function Courses() {
 
@@ -56,18 +55,9 @@ function Courses() {
                     <Route path="Modules" element={<Modules />} />
                     <Route path="Assignments" element={< Assignments />} />
                     <Route path="Assignments/new" element={<AssignmentEditor
-                        creating={true}
-                        addAssignment={addAssignment}
-                        deleteAssignment={deleteAssignment}
-                        updateAssignment={updateAssignment}
-                        selectAssignment={selectAssignment} />} />
+                        creating={true} />} />
                     <Route path="Assignments/:assignmentId" element={<AssignmentEditor
-                        creating={false}
-                        addAssignment={addAssignment}
-                        deleteAssignment={deleteAssignment}
-                        updateAssignment={updateAssignment}
-                        selectAssignment={selectAssignment}
-                    />} />
+                        creating={false} />} />
                     <Route path="Grades" element={<Grades />} />
                 </Routes>
             </div>

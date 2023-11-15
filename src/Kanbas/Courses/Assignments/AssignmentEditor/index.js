@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-// import db from "../../../Database";
+import { createAssignment, editAssignment } from '.././client.js';
+import { addAssignment, updateAssignment } from '.././assignmentsReducer.js';
 
-function AssignmentEditor({ creating, addAssignment, deleteAssignment, updateAssignment, selectAssignment }) {
+function AssignmentEditor({ creating }) {
 
     const { courseId, assignmentId } = useParams();
+    
     const dispatch = useDispatch();
+
     let assignmentValue;
 
     const navigate = useNavigate();
+
     const temp = useSelector(state => state.assignmentsReducer.assignments);
+    
     if (!creating) {
         assignmentValue = temp.find((assignment) => assignment._id === assignmentId);
     } else {
@@ -27,14 +32,25 @@ function AssignmentEditor({ creating, addAssignment, deleteAssignment, updateAss
 
     const [assignment, setAssignment] = useState(assignmentValue);
 
+    const handleAddAssignment = () => {
+        createAssignment(courseId, assignment).then((assignment) => {
+          dispatch(addAssignment({...assignment, course: courseId }));
+        });
+      };
+
+      const handleUpdateAssignment = async () => {
+        const status = await editAssignment(assignment);
+        dispatch(updateAssignment(assignment));
+    };
+    
     const handleSave = () => {
         if (!creating) {
             dispatch(updateAssignment(assignment));
-
+            handleUpdateAssignment();
         } else {
             dispatch(addAssignment(assignment));
+            handleAddAssignment();
         }
-
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
