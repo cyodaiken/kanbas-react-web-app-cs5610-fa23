@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const COURSES_URL = "http://localhost:4000/api/courses";
-const MODULES_URL = "http://localhost:4000/api/modules";
+const COURSES_URL = 'https://kanbas-node-server-app-cy-4d8074c64cff.herokuapp.com/api/courses';
+const MODULES_URL = 'https://kanbas-node-server-app-cy-4d8074c64cff.herokuapp.com/api/modules';
+
 
 export const createModule = async (courseId, module) => {
     const response = await axios.post(
