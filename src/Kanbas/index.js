@@ -23,7 +23,11 @@ function Kanbas() {
         startDate: "2023-09-10", endDate: "2023-12-15",
     });
 
-    const URL = "http://localhost:4000/api/courses";
+    // const URL = 'https://kanbas-node-server-app-cy-4d8074c64cff.herokuapp.com/api/courses';
+
+    const API_BASE = process.env.REACT_APP_API_BASE;
+
+    const URL = `${API_BASE}/courses`;
 
     const createBreadcrumb = () => {
         const path = pathname.split("/");
@@ -31,6 +35,7 @@ function Kanbas() {
     };
 
     const findAllCourses = async () => {
+        console.log(URL);
         const response = await axios.get(URL);
         setCourses(response.data);
     };

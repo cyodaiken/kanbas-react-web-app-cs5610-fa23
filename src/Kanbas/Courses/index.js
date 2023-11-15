@@ -15,7 +15,11 @@ function Courses() {
     const { courseId } = useParams();
     const { pathname } = useLocation();
     const [course, setCourse] = useState({});
-    const URL = "http://localhost:4000/api/courses";
+
+    const API_BASE = process.env.REACT_APP_API_BASE;
+
+    const URL = `${API_BASE}/courses`;
+    // const URL = 'https://kanbas-node-server-app-cy-4d8074c64cff.herokuapp.com/api/courses';
 
     const findCourseById = async (courseId) => {
         const response = await axios.get(
