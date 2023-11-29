@@ -1,6 +1,6 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Account() {
     const [account, setAccount] = useState(null);
@@ -64,11 +64,18 @@ function Account() {
                         <option value="FACULTY">Faculty</option>
                         <option value="STUDENT">Student</option>
                     </select>
+
+                    <button className="btn btn-danger mt-2" onClick={save}>
+                        Save
+                    </button>< br/>
+                    
+                    <Link to="/Kanbas/admin/users" className="btn btn-secondary mt-2">
+                        Users
+                    </Link>
+
                 </div>
             )}
-            <button className="btn btn-danger" onClick={save}>
-                Save
-            </button>
+
         </div>
     );
 }
