@@ -1,17 +1,36 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 
 function Account() {
     const [account, setAccount] = useState(null);
 
+    const { id } = useParams();
+
     const navigate = useNavigate();
 
-    const fetchAccount = async () => { const account = await client.account(); setAccount(account); };
+    const fetchAccount = async () => { const account = await client.account(); setAccount(account); if (!account){navigate("/Kanbas/signin")}};
 
     const save = async () => { await client.updateUser(account); };
 
-    useEffect(() => { fetchAccount(); }, []);
+    const findUserById = async (id) => {
+        const user = await client.findUserById(id);
+        setAccount(user);
+    };
+
+    const signout = async () => {
+        await client.signout();
+        navigate("/Kanbas/signin");
+    };
+
+
+    useEffect(() => {
+        if (id) {
+            findUserById(id);
+        } else {
+            fetchAccount();
+        }
+    }, []);
 
     return (
         <div className="w-50 mt-3 ms-3">
@@ -54,7 +73,7 @@ function Account() {
                             ...account,
                             email: e.target.value
                         })} />
-                    <label htmlFor="account">Account</label>
+                    <label htmlFor="account">Role</label>
                     <select id="account" className="form-select" onChange={(e) => setAccount({
                         ...account,
                         role: e.target.value
@@ -65,10 +84,14 @@ function Account() {
                         <option value="STUDENT">Student</option>
                     </select>
 
-                    <button className="btn btn-danger mt-2" onClick={save}>
+                    <button className="btn btn-success mt-2 me-2" onClick={save}>
                         Save
-                    </button>< br/>
-                    
+                    </button>
+
+                    <button className="btn btn-danger mt-2 me-2" onClick={signout}>
+                        Signout
+                    </button><br />
+
                     <Link to="/Kanbas/admin/users" className="btn btn-secondary mt-2">
                         Users
                     </Link>
