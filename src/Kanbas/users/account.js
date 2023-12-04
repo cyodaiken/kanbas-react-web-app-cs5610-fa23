@@ -9,7 +9,7 @@ function Account() {
 
     const navigate = useNavigate();
 
-    const fetchAccount = async () => { const account = await client.account(); setAccount(account); if (!account){navigate("/Kanbas/signin")}};
+    const fetchAccount = async () => { const account = await client.account(); setAccount(account); if (!account) { navigate("/Kanbas/signin") } };
 
     const save = async () => { await client.updateUser(account); };
 
@@ -92,9 +92,9 @@ function Account() {
                         Signout
                     </button><br />
 
-                    <Link to="/Kanbas/admin/users" className="btn btn-secondary mt-2">
+                    {account.role === "ADMIN" && (<Link to="/Kanbas/admin/users" className="btn btn-secondary mt-2">
                         Users
-                    </Link>
+                    </Link>)}
 
                 </div>
             )}
